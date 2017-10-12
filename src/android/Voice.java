@@ -40,6 +40,8 @@ import com.iflytek.sunflower.FlowerCollector;
 
 public class Voice extends CordovaPlugin {
     public static final String TAG = "Voice";
+    public static final String PREFS_NAME = "Cordova.Plugin.xfyunvoice";
+    public static final String APPID_PROPERTY_KEY = "appid";
     public static final int PERMISSION_DENIED_ERROR = 20;
     public static final String AUDIO = Manifest.permission.RECORD_AUDIO;
     public static final int REQ_CODE = 0;
@@ -50,6 +52,7 @@ public class Voice extends CordovaPlugin {
     // 语音听写UI
     private RecognizerDialog mIatDialog;
     private boolean initStatus = false;
+    protected String appId;
 
     /**
      * Constructor.
@@ -75,7 +78,9 @@ public class Voice extends CordovaPlugin {
         // 设置你申请的应用appid,请勿在'='与appid之间添加空格及空转义符
 
         // 注意： appid 必须和下载的SDK保持一致，否则会出现10407错误
-        SpeechUtility.createUtility(cordova.getActivity(), "appid=59c8ca0a," + SpeechConstant.FORCE_LOGIN + "=true");
+        this.appId = preferences.getString(APPID_PROPERTY_KEY, "");//
+        SpeechUtility.createUtility(cordova.getActivity(),
+                "appid=" + this.appId + "," + SpeechConstant.FORCE_LOGIN + "=true");
 
         // 初始化识别无UI识别对象
         // 使用SpeechRecognizer对象，可根据回调消息自定义界面；

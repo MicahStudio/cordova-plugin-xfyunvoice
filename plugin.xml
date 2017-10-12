@@ -7,6 +7,7 @@
     <license>MIT License</license>
     <repo>https://github.com/MicahStudio/cordova-plugin-xfyunvoice.git</repo>
 
+    <preference name="APPID" />
     <js-module name="voice" src="www/voice.js">
         <clobbers target="voice" />
     </js-module>
@@ -16,7 +17,8 @@
             <feature name="Voice" >
                 <param name="android-package" value="com.baishijiaju.cordova.Voice"/>
                 <param name="onload" value="true" />
-            </feature>            
+            </feature>    
+            <preference name="APPID" value="$APPID"/>        
         </config-file>
         <config-file target="AndroidManifest.xml" parent="/manifest">
             <!-- Required  一些系统要求的权限，如访问网络等-->            
