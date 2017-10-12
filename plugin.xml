@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com-baishijiaju-cordova-voice" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>xf Voice</name>
+    <description>Cordova xf Voice Plugin</description>
+    <keywords>cordova,xfyun,voice</keywords>
+    <author>Ou Jun</author>
+    <license>MIT License</license>
+    <repo>https://github.com/MicahStudio/cordova-plugin-xfyunvoice.git</repo>
+
+    <js-module name="voice" src="www/voice.js">
+        <clobbers target="voice" />
+    </js-module>
+	<!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Voice" >
+                <param name="android-package" value="com.baishijiaju.cordova.Voice"/>
+                <param name="onload" value="true" />
+            </feature>            
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <!-- Required  一些系统要求的权限，如访问网络等-->            
+            <uses-permission android:name="android.permission.RECORD_AUDIO" />
+            <uses-permission android:name="android.permission.INTERNET" />
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+            <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+            <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+            <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+            <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+            <uses-permission android:name="android.permission.READ_CONTACTS" />
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+        </config-file>
+        <source-file src="src/android/Voice.java" target-dir="src/com/baishijiaju/cordova" />
+        
+        <source-file src="src/android/libs/arm64-v8a/libmsc.so" target-dir="libs/arm64-v8a"/>
+        <source-file src="src/android/libs/armeabi/libmsc.so" target-dir="libs/armeabi"/>
+        <source-file src="src/android/libs/armeabi-v7a/libmsc.so" target-dir="libs/armeabi-v7a"/>
+        <source-file src="src/android/libs/x86/libmsc.so" target-dir="libs/x86"/>
+        <source-file src="src/android/libs/x86_64/libmsc.so" target-dir="libs/x86_64"/>
+
+        <source-file src="src/android/libs/Msc.jar" target-dir="libs"/>
+        <source-file src="src/android/libs/Sunflower.jar" target-dir="libs"/>
+
+        <source-file src="src/android/assets/iflytek/recognize.xml" target-dir="assets/iflytek"/>
+        <source-file src="src/android/assets/iflytek/voice_bg.9.png" target-dir="assets/iflytek"/>
+        <source-file src="src/android/assets/iflytek/voice_empty.png" target-dir="assets/iflytek"/>
+        <source-file src="src/android/assets/iflytek/voice_full.png" target-dir="assets/iflytek"/>
+        <source-file src="src/android/assets/iflytek/waiting.png" target-dir="assets/iflytek"/>
+        <source-file src="src/android/assets/iflytek/warning.png" target-dir="assets/iflytek"/> 
+
+        <framework src="com.android.support:support-v4:23.+" />
+    </platform> 
+</plugin>
