@@ -24,7 +24,20 @@
     self.currentCallbackId = command.callbackId;
 //请求语音
     
+    if(_iflyRecognizerView == nil)
+    {
+        [self initRecognizer ];
+    }
+    //设置音频来源为麦克风
+    [_iflyRecognizerView setParameter:IFLY_AUDIO_SOURCE_MIC forKey:@"audio_source"];
 
+    //设置听写结果格式为json
+    [_iflyRecognizerView setParameter:@"plain" forKey:[IFlySpeechConstant RESULT_TYPE]];
+    
+    //保存录音文件，保存在sdk工作路径中，如未设置工作路径，则默认保存在library/cache下
+    [_iflyRecognizerView setParameter:@"asr.pcm" forKey:[IFlySpeechConstant ASR_AUDIO_PATH]];
+    
+    BOOL ret = [_iflyRecognizerView start];
 }
 
 /**
