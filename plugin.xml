@@ -54,7 +54,7 @@
 
         <framework src="com.android.support:support-v4:23.+" />
     </platform> 
-    <platform name="android">
+    <platform name="ios">
         <config-file target="config.xml" parent="/*">
             <feature name="Voice">
                 <param name="ios-package" value="CDVvOICE"/>

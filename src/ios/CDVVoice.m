@@ -18,6 +18,7 @@
     [IFlySpeechUtility createUtility:initString];
     
     [self initRecognizer];
+    NSLog(@"cordova-plugin-xunfeiyun has been initialized. APP_ID: %@.",  APPID_VALUE);
 }
 - (void)startVoice:(CDVInvokedUrlCommand *)command {
     
