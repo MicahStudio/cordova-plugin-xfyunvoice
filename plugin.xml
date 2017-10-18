@@ -126,12 +126,28 @@
         <source-file src="src/ios/lib/iflyMSC.framework/iflyMSC" framework="true" />
 
         <!-- Other required frameworks -->
+        <!-- <framework src="iflyMSC.framework" />
         <framework src="libz.tbd" />
         <framework src="libsqlite3.0.tbd" />
         <framework src="CoreTelephony.framework" />
         <framework src="SystemConfiguration.framework" />
         <framework src="Security.framework" />
         <framework src="CFNetwork.framework" />
-        <framework src="libstdc++.6.tbd" />
+        <framework src="libstdc++.6.tbd" /> -->
+
+
+        <framework src="iflyMSC.framework" />
+        <framework src="libz.tbd" />
+        <framework src="CoreLocation.framework" />
+        <framework src="CoreTelephony.framework" />
+        <framework src="AVFoundation.framework" />
+        <framework src="AddressBook.framework" />
+        <framework src="AudioToolbox.framework" />
+        <framework src="Contacts.framework" />
+        <framework src="SystemConfiguration.framework" />
+        <framework src="QuartzCore.framework" />
+        <framework src="UIKit.framework" />
+        <framework src="Foundation.framework" />
+        <framework src="CoreGraphics.framework" />
     </platform>
 </plugin>
