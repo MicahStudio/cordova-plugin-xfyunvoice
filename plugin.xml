@@ -96,34 +96,34 @@
         <source-file src="src/ios/CDVVoice.m" />
 
         <!-- Wechat Official -->
-        <header-file src="src/ios/libs/iflyMSC.framework/Headers/IFlyAudioSession.h" />
-        <header-file src="src/ios/libs/iflyMSC.framework/Headers/IFlyContact.h" />
-        <header-file src="src/ios/libs/iflyMSC.framework/Headers/IFlyDataUploader.h" />
-        <header-file src="src/ios/libs/iflyMSC.framework/Headers/IFlyDebugLog.h" />
-        <header-file src="src/ios/libs/iflyMSC.framework/Headers/IFlyISVDelegate.h" />
-        <header-file src="src/ios/libs/iflyMSC.framework/Headers/IFlyISVRecognizer.h" />
-        <header-file src="src/ios/libs/iflyMSC.framework/Headers/IFlyMSC.h" />
-        <header-file src="src/ios/libs/iflyMSC.framework/Headers/IFlyPcmRecorder.h" />
-        <header-file src="src/ios/libs/iflyMSC.framework/Headers/IFlyRecognizerView.h" />
-        <header-file src="src/ios/libs/iflyMSC.framework/Headers/IFlyRecognizerViewDelegate.h" />
-        <header-file src="src/ios/libs/iflyMSC.framework/Headers/IFlyResourceUtil.h" />
-        <header-file src="src/ios/libs/iflyMSC.framework/Headers/IFlySetting.h" />
-        <header-file src="src/ios/libs/iflyMSC.framework/Headers/IFlySpeechConstant.h" />
-        <header-file src="src/ios/libs/iflyMSC.framework/Headers/IFlySpeechError.h" />
-        <header-file src="src/ios/libs/iflyMSC.framework/Headers/IFlySpeechEvaluator.h" />
-        <header-file src="src/ios/libs/iflyMSC.framework/Headers/IFlySpeechEvaluatorDelegate.h" />
-        <header-file src="src/ios/libs/iflyMSC.framework/Headers/IFlySpeechEvent.h" />
-        <header-file src="src/ios/libs/iflyMSC.framework/Headers/IFlySpeechRecognizer.h" />
-        <header-file src="src/ios/libs/iflyMSC.framework/Headers/IFlySpeechRecognizerDelegate.h" />
-        <header-file src="src/ios/libs/iflyMSC.framework/Headers/IFlySpeechSynthesizer.h" />
-        <header-file src="src/ios/libs/iflyMSC.framework/Headers/IFlySpeechSynthesizerDelegate.h" />
-        <header-file src="src/ios/libs/iflyMSC.framework/Headers/IFlySpeechUnderstander.h" />
-        <header-file src="src/ios/libs/iflyMSC.framework/Headers/IFlySpeechUtility.h" />
-        <header-file src="src/ios/libs/iflyMSC.framework/Headers/IFlyTextUnderstander.h" />
-        <header-file src="src/ios/libs/iflyMSC.framework/Headers/IFlyUserWords.h" />
-        <header-file src="src/ios/libs/iflyMSC.framework/Headers/IFlyVoiceWakeuper.h" />
-        <header-file src="src/ios/libs/iflyMSC.framework/Headers/IFlyVoiceWakeuperDelegate.h" />
-        <!-- <source-file src="src/ios/libs/OpenSDK1.7.5/libWeChatSDK.a" framework="true" /> -->
+        <header-file src="src/ios/lib/iflyMSC.framework/Headers/IFlyAudioSession.h" />
+        <header-file src="src/ios/lib/iflyMSC.framework/Headers/IFlyContact.h" />
+        <header-file src="src/ios/lib/iflyMSC.framework/Headers/IFlyDataUploader.h" />
+        <header-file src="src/ios/lib/iflyMSC.framework/Headers/IFlyDebugLog.h" />
+        <header-file src="src/ios/lib/iflyMSC.framework/Headers/IFlyISVDelegate.h" />
+        <header-file src="src/ios/lib/iflyMSC.framework/Headers/IFlyISVRecognizer.h" />
+        <header-file src="src/ios/lib/iflyMSC.framework/Headers/IFlyMSC.h" />
+        <header-file src="src/ios/lib/iflyMSC.framework/Headers/IFlyPcmRecorder.h" />
+        <header-file src="src/ios/lib/iflyMSC.framework/Headers/IFlyRecognizerView.h" />
+        <header-file src="src/ios/lib/iflyMSC.framework/Headers/IFlyRecognizerViewDelegate.h" />
+        <header-file src="src/ios/lib/iflyMSC.framework/Headers/IFlyResourceUtil.h" />
+        <header-file src="src/ios/lib/iflyMSC.framework/Headers/IFlySetting.h" />
+        <header-file src="src/ios/lib/iflyMSC.framework/Headers/IFlySpeechConstant.h" />
+        <header-file src="src/ios/lib/iflyMSC.framework/Headers/IFlySpeechError.h" />
+        <header-file src="src/ios/lib/iflyMSC.framework/Headers/IFlySpeechEvaluator.h" />
+        <header-file src="src/ios/lib/iflyMSC.framework/Headers/IFlySpeechEvaluatorDelegate.h" />
+        <header-file src="src/ios/lib/iflyMSC.framework/Headers/IFlySpeechEvent.h" />
+        <header-file src="src/ios/lib/iflyMSC.framework/Headers/IFlySpeechRecognizer.h" />
+        <header-file src="src/ios/lib/iflyMSC.framework/Headers/IFlySpeechRecognizerDelegate.h" />
+        <header-file src="src/ios/lib/iflyMSC.framework/Headers/IFlySpeechSynthesizer.h" />
+        <header-file src="src/ios/lib/iflyMSC.framework/Headers/IFlySpeechSynthesizerDelegate.h" />
+        <header-file src="src/ios/lib/iflyMSC.framework/Headers/IFlySpeechUnderstander.h" />
+        <header-file src="src/ios/lib/iflyMSC.framework/Headers/IFlySpeechUtility.h" />
+        <header-file src="src/ios/lib/iflyMSC.framework/Headers/IFlyTextUnderstander.h" />
+        <header-file src="src/ios/lib/iflyMSC.framework/Headers/IFlyUserWords.h" />
+        <header-file src="src/ios/lib/iflyMSC.framework/Headers/IFlyVoiceWakeuper.h" />
+        <header-file src="src/ios/lib/iflyMSC.framework/Headers/IFlyVoiceWakeuperDelegate.h" />
+        <!-- <source-file src="src/ios/lib/OpenSDK1.7.5/libWeChatSDK.a" framework="true" /> -->
 
         <!-- Other required frameworks -->
         <framework src="libz.tbd" />
