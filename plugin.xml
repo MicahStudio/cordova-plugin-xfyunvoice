@@ -60,7 +60,7 @@
                 <param name="ios-package" value="CDVvOICE"/>
                 <param name="onload" value="true" />
             </feature>
-            <preference name="IOSAPPID" value="$IOSAPPID"/>
+            <preference name="APPID" value="$APPID"/>
         </config-file>
 
         <config-file target="*-Info.plist" parent="LSApplicationQueriesSchemes">
@@ -85,7 +85,7 @@
                     <string>voice</string>
                     <key>CFBundleURLSchemes</key>
                     <array>
-                        <string>$IOSAPPID</string>
+                        <string>$APPID</string>
                     </array>
                 </dict>
             </array>

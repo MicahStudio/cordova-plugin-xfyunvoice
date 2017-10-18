@@ -3,7 +3,7 @@
 @implementation CDVVoice
 - (void)pluginInitialize {
     
-    NSString* APPID_VALUE = [[self.commandDelegate settings] objectForKey:@"iosappid"];
+    NSString* APPID_VALUE = [[self.commandDelegate settings] objectForKey:@"appid"];
     //初始化
        
     //设置sdk的工作路径
