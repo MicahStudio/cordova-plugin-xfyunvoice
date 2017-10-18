@@ -62,6 +62,17 @@
     [self.commandDelegate sendPluginResult:pluginResult callbackId:self.currentCallbackId];
     //_textView.text = [NSString stringWithFormat:@"%@%@",_textView.text,result];
 }
+
+/**
+ 听写结束回调（注：无论听写是否正确都会回调）
+ error.errorCode =
+ 0     听写正确
+ other 听写出错
+ ****/
+- (void) onError:(IFlySpeechError *) error
+{
+    NSLog(@"errorCode:%d",[error errorCode]);
+}
 /**
  设置识别参数
  ****/

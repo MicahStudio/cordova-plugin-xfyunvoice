@@ -123,7 +123,7 @@
         <header-file src="src/ios/lib/iflyMSC.framework/Headers/IFlyUserWords.h" />
         <header-file src="src/ios/lib/iflyMSC.framework/Headers/IFlyVoiceWakeuper.h" />
         <header-file src="src/ios/lib/iflyMSC.framework/Headers/IFlyVoiceWakeuperDelegate.h" />
-        <source-file src="src/ios/lib/iflyMSC.framework/iflyMSC" framework="true" />
+        <source-file src="src/ios/lib/iflyMSC.framework/iflyMSC" />
 
         <!-- Other required frameworks -->
         <!-- <framework src="iflyMSC.framework" />
