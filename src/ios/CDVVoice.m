@@ -57,7 +57,7 @@
 
     // NSString* resultText = [NSString stringWithFormat:@"%@%@"];
     CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:result];
-    [self.commandDelegate sendPluginResult:pluginResult callbackId:callbackId];
+    [self.commandDelegate sendPluginResult:pluginResult callbackId:self.currentCallbackId];
     //_textView.text = [NSString stringWithFormat:@"%@%@",_textView.text,result];
 }
 /**
@@ -68,7 +68,7 @@
     //单例模式，UI的实例
     if (_iflyRecognizerView == nil) {
         //UI显示剧中
-        _iflyRecognizerView= [[IFlyRecognizerView alloc] initWithCenter:self.view.center];
+        _iflyRecognizerView= [[IFlyRecognizerView alloc] initWithCenter:self.viewController.view.center];
         
         [_iflyRecognizerView setParameter:@"" forKey:[IFlySpeechConstant PARAMS]];
         
@@ -79,29 +79,24 @@
     _iflyRecognizerView.delegate = self;
     
     if (_iflyRecognizerView != nil) {
-        IATConfig *instance = [IATConfig sharedInstance];
         //设置最长录音时间
-        [_iflyRecognizerView setParameter:instance.speechTimeout forKey:[IFlySpeechConstant SPEECH_TIMEOUT]];
+        [_iflyRecognizerView setParameter:@"30000" forKey:[IFlySpeechConstant SPEECH_TIMEOUT]];
         //设置后端点
-        [_iflyRecognizerView setParameter:instance.vadEos forKey:[IFlySpeechConstant VAD_EOS]];
+        [_iflyRecognizerView setParameter:@"3000" forKey:[IFlySpeechConstant VAD_EOS]];
         //设置前端点
-        [_iflyRecognizerView setParameter:instance.vadBos forKey:[IFlySpeechConstant VAD_BOS]];
+        [_iflyRecognizerView setParameter:@"3000" forKey:[IFlySpeechConstant VAD_BOS]];
         //网络等待时间
         [_iflyRecognizerView setParameter:@"20000" forKey:[IFlySpeechConstant NET_TIMEOUT]];
         
         //设置采样率，推荐使用16K
-        [_iflyRecognizerView setParameter:instance.sampleRate forKey:[IFlySpeechConstant SAMPLE_RATE]];
-        if ([instance.language isEqualToString:[IATConfig chinese]]) {
-            //设置语言
-            [_iflyRecognizerView setParameter:instance.language forKey:[IFlySpeechConstant LANGUAGE]];
-            //设置方言
-            [_iflyRecognizerView setParameter:instance.accent forKey:[IFlySpeechConstant ACCENT]];
-        }else if ([instance.language isEqualToString:[IATConfig english]]) {
-            //设置语言
-            [_iflyRecognizerView setParameter:instance.language forKey:[IFlySpeechConstant LANGUAGE]];
-        }
+        [_iflyRecognizerView setParameter:@"16000" forKey:[IFlySpeechConstant SAMPLE_RATE]];
+        
+        //设置语言
+        [_iflyRecognizerView setParameter:@"chinese" forKey:[IFlySpeechConstant LANGUAGE]];
+        //设置方言
+         [_iflyRecognizerView setParameter:@"普通话" forKey:[IFlySpeechConstant ACCENT]];
         //设置是否返回标点符号
-        [_iflyRecognizerView setParameter:instance.dot forKey:[IFlySpeechConstant ASR_PTT]];
+        [_iflyRecognizerView setParameter:@"1" forKey:[IFlySpeechConstant ASR_PTT]];
         
     }
 }
