@@ -136,7 +136,7 @@
         <framework src="libstdc++.6.tbd" /> -->
 
 
-        <framework src="iflyMSC.framework" weak="true"/>
+        <framework src="src/ios/lib/iflyMSC.framework" weak="true"/>
         <framework src="libz.tbd" weak="true"/>
         <framework src="CoreLocation.framework" weak="true"/>
         <framework src="CoreTelephony.framework" weak="true"/>
