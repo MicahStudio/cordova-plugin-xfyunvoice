@@ -2,6 +2,7 @@
 // #import "iflyMSC/IFlyMSC.h"
 #import "iflyMSC/IFlyRecognizerView.h"
 #import "iflyMSC/IFlyRecognizerViewDelegate.h"
+#import "iflyMSC/IFlySpeechError.h"
 #import "iflyMSC/IFlySetting.h"
 #import "iflyMSC/IFlySpeechUtility.h"
 #import "iflyMSC/IFlySpeechConstant.h"
