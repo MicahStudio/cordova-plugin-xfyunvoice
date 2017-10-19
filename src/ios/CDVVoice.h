@@ -1,6 +1,11 @@
 #import <Cordova/CDV.h>
-#import "iflyMSC/IFlyMSC.h"
-
+// #import "iflyMSC/IFlyMSC.h"
+#import "iflyMSC/IFlyRecognizerView.h"
+#import "iflyMSC/IFlyRecognizerViewDelegate.h"
+#import "iflyMSC/IFlySetting.h"
+#import "iflyMSC/IFlySpeechUtility.h"
+#import "iflyMSC/IFlySpeechConstant.h"
+#import "iflyMSC/IFlyRecognizerView.h"
 
 @class IFlySpeechUnderstander;
 @interface CDVVoice : CDVPlugin <IFlyRecognizerViewDelegate>
