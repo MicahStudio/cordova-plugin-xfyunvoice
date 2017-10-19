@@ -40,7 +40,7 @@
     //保存录音文件，保存在sdk工作路径中，如未设置工作路径，则默认保存在library/cache下
     [_iflyRecognizerView setParameter:@"asr.pcm" forKey:[IFlySpeechConstant ASR_AUDIO_PATH]];
     
-    BOOL ret = [_iflyRecognizerView start];
+    [_iflyRecognizerView start];
 }
 
 /**
