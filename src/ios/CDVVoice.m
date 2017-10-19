@@ -80,7 +80,7 @@
 {
     //单例模式，UI的实例
     if (_iflyRecognizerView == nil) {
-        //UI显示剧中
+        //UI显示居中
         _iflyRecognizerView= [[IFlyRecognizerView alloc] initWithCenter:self.viewController.view.center];
         
         [_iflyRecognizerView setParameter:@"" forKey:[IFlySpeechConstant PARAMS]];
