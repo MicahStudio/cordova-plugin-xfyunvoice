@@ -54,6 +54,7 @@
 
         <framework src="com.android.support:support-v4:23.+" />
     </platform> 
+	<!-- ios -->
     <platform name="ios">
         <config-file target="config.xml" parent="/*">
             <feature name="Voice">
@@ -62,35 +63,22 @@
             </feature>
             <preference name="APPID" value="$APPID"/>
         </config-file>
-
-        <config-file target="*-Info.plist" parent="LSApplicationQueriesSchemes">
-            <array>
-                <string>voice</string>
-                <string>voice</string>
-            </array>
+        <preference name="MICROPHONE_USAGE_DESCRIPTION" default=" " />
+        <config-file target="*-Info.plist" parent="NSMicrophoneUsageDescription">
+             <string>$MICROPHONE_USAGE_DESCRIPTION</string>
         </config-file>
-
-        <config-file target="*-Info.plist" parent="NSAppTransportSecurity">
-            <dict>
-                <key>NSAllowsArbitraryLoads</key>
-                <true/>
-            </dict>
+        <preference name="LOCATION_USAGE_DESCRIPTION" default=" " />
+        <config-file target="*-Info.plist" parent="NSLocationUsageDescription">
+             <string>$LOCATION_USAGE_DESCRIPTION</string>
         </config-file>
-        
-
-        <config-file target="*-Info.plist" parent="CFBundleURLTypes">
-            <array>
-                <dict>
-                    <key>CFBundleURLName</key>
-                    <string>voice</string>
-                    <key>CFBundleURLSchemes</key>
-                    <array>
-                        <string>$APPID</string>
-                    </array>
-                </dict>
-            </array>
+        <preference name="LOCATION_ALWAYS_USAGE_DESCRIPTION" default=" " />
+        <config-file target="*-Info.plist" parent="NSLocationAlwaysUsageDescription">
+             <string>$LOCATION_ALWAYS_USAGE_DESCRIPTION</string>
         </config-file>
-
+        <preference name="CONTACTS_USAGE_DESCRIPTION" default=" " />
+        <config-file target="*-Info.plist" parent="NSContactsUsageDescription">
+             <string>$CONTACTS_USAGE_DESCRIPTION</string>
+        </config-file>
         <!-- Plugin source code -->
         <header-file src="src/ios/CDVVoice.h" />
         <source-file src="src/ios/CDVVoice.m" />
@@ -126,18 +114,18 @@
         <source-file src="src/ios/lib/iflyMSC.framework/iflyMSC" framework="true" /> -->
 
         <framework src="libz.tbd" />
-        <framework src="CoreLocation.framework" />
-        <framework src="CoreTelephony.framework" />
         <framework src="AVFoundation.framework" />
-        <framework src="AddressBook.framework" />
-        <framework src="AudioToolbox.framework" />
-        <framework src="Contacts.framework" />
         <framework src="SystemConfiguration.framework" />
-        <framework src="QuartzCore.framework" />
-        <framework src="UIKit.framework" />
         <framework src="Foundation.framework" />
+        <framework src="CoreTelephoney.framework" />
+        <framework src="AudioToolbox.framework" />
+        <framework src="UIKit.framework" />
+        <framework src="CoreLocation.framework" />
+        <framework src="Contacts.framework" />
+        <framework src="AddressBook.framework" />
+        <framework src="QuartzCore.framework" />
         <framework src="CoreGraphics.framework" />
-        
+
         <framework src="src/ios/lib/iflyMSC.framework" custom="true"/>
     </platform>
 </plugin>
