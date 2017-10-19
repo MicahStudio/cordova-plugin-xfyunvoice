@@ -96,7 +96,7 @@
         <source-file src="src/ios/CDVVoice.m" />
 
         <!-- Wechat Official -->
-        <header-file src="src/ios/lib/iflyMSC.framework/Headers/IFlyAudioSession.h" />
+        <!-- <header-file src="src/ios/lib/iflyMSC.framework/Headers/IFlyAudioSession.h" />
         <header-file src="src/ios/lib/iflyMSC.framework/Headers/IFlyContact.h" />
         <header-file src="src/ios/lib/iflyMSC.framework/Headers/IFlyDataUploader.h" />
         <header-file src="src/ios/lib/iflyMSC.framework/Headers/IFlyDebugLog.h" />
@@ -123,20 +123,8 @@
         <header-file src="src/ios/lib/iflyMSC.framework/Headers/IFlyUserWords.h" />
         <header-file src="src/ios/lib/iflyMSC.framework/Headers/IFlyVoiceWakeuper.h" />
         <header-file src="src/ios/lib/iflyMSC.framework/Headers/IFlyVoiceWakeuperDelegate.h" />
-        <source-file src="src/ios/lib/iflyMSC.framework/iflyMSC" framework="true" />
+        <source-file src="src/ios/lib/iflyMSC.framework/iflyMSC" framework="true" /> -->
 
-        <!-- Other required frameworks -->
-        <!-- <framework src="iflyMSC.framework" />
-        <framework src="libz.tbd" />
-        <framework src="libsqlite3.0.tbd" />
-        <framework src="CoreTelephony.framework" />
-        <framework src="SystemConfiguration.framework" />
-        <framework src="Security.framework" />
-        <framework src="CFNetwork.framework" />
-        <framework src="libstdc++.6.tbd" /> -->
-
-
-        <framework src="src/ios/lib/iflyMSC.framework" custom="true"/>
         <framework src="libz.tbd" weak="true"/>
         <framework src="CoreLocation.framework" />
         <framework src="CoreTelephony.framework" weak="true"/>
@@ -149,5 +137,7 @@
         <framework src="UIKit.framework" weak="true"/>
         <framework src="Foundation.framework" weak="true"/>
         <framework src="CoreGraphics.framework" weak="true"/>
+        
+        <framework src="src/ios/lib/iflyMSC.framework" custom="true"/>
     </platform>
 </plugin>
