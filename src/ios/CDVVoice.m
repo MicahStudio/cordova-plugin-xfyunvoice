@@ -32,7 +32,7 @@
         [self initRecognizer ];
     }
     //设置音频来源为麦克风
-    [_iflyRecognizerView setParameter:IFLY_AUDIO_SOURCE_MIC forKey:@"audio_source"];
+    [_iflyRecognizerView setParameter:@"1" forKey:@"audio_source"];
 
     //设置听写结果格式为json
     [_iflyRecognizerView setParameter:@"plain" forKey:[IFlySpeechConstant RESULT_TYPE]];
