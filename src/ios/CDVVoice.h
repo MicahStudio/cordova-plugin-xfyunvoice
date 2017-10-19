@@ -1,5 +1,5 @@
 #import <Cordova/CDV.h>
-#import "IFlyMSC.h"
+#import "iflyMSC/IFlyMSC.h"
 
 
 @class IFlySpeechUnderstander;
