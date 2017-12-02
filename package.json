@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Cordova xf Voice Plugin",
   "cordova": {
-    "id": "com-baishijiaju-cordova-voice",
+    "id": "cordova-plugin-xfyunvoice",
     "platforms": [
       "android"
     ]
